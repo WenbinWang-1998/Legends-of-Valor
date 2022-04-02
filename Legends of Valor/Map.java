@@ -26,12 +26,10 @@ public class Map {
             for (int j = 0; j < 8; j++){
                 if(j == 2 || j == 5){
                     printMap[i][j] = CellType.INACCESSIBLE;
-
                     //trueMap[i][j] = new Inaccessible();
                 }
                 else if(i == 0 || i == 7){
                     printMap[i][j] = CellType.NEXUS;
-
                     //trueMap[i][j] = new Nexus();
                 }
             }
@@ -44,10 +42,7 @@ public class Map {
     private static void randomGenerateLane(int startR, int endR, int startC, int endC){
         Random random = new Random();
         CellType cell = CellType.INACCESSIBLE;
-//        int randomR = random.nextInt(endR - startR + 1) + startR;
-//        int randomC = random.nextInt(endC - startC + 1) + startC;
         int size = (endR - startR + 1)*(endC - startC + 1);
-//        List<Integer> list = new ArrayList<>();
         Set<Pair> set = new HashSet<>();
 
         //Generate a list with random position.
